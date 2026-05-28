@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Piekarnia Pod Telegrafem</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="menu-glowne">
+            <div class="logo">🍞 Piekarnia <span>Pod Telegrafem</span></div>
+            <ul>
+                <li><a href="index.html">Start</a></li>
+                <li><a href="oferty/o-nas.html">O nas</a></li>
+                <li><a href="oferty/cennik.html">Cennik</a></li>
+                <li><a href="kontakt.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact" style="margin-top: 20px;">
+            <h2 style="text-align: center; font-size: 2.5rem; font-weight: 800; color: var(--kolor-glowny); margin-bottom: 10px;">Skontaktuj się z nami</h2>
+            <p style="text-align: center; color: #5A524C; max-width: 600px; margin: 0 auto 40px auto;">Planujesz większe przyjęcie, potrzebujesz wypieków okolicznościowych lub chcesz zapytać o zamówienia hurtowe? Napisz do nas!</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Imię i Nazwisko</label>
+                    <input type="text" id="name" placeholder="Wpisz swoje pełne imię i nazwisko" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adres E-mail</label>
+                    <input type="email" id="email" placeholder="np. twojmail@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Numer Telefonu (Opcjonalnie)</label>
+                    <input type="tel" id="phone" placeholder="np. +48 123 456 789">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Treść pytania</label>
+                    <textarea id="message" rows="6" placeholder="Napisz szczegółowo, w czym możemy Ci pomóc..." required></textarea>
+                </div>
+
+                <button type="submit">Wyślij wiadomość</button>
+            </form>
+        </section>
+
+        <section class="mapa-kontener">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m4!1s0x4717f9202ed726ab%3A0x6b19a77bd652496a!2sRynek+21%2C+33-230+Szczucin!5e0!3m2!1spl!2spl!4v1716920000000!5m2!1spl!2spl"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <div class="stopka-kontener">
+            <div class="stopka-sekcja">
+                <h3>O Piekarni</h3>
+                <p>Tradycja, pasja i rzemiosło. Dbamy o najwyższą jakość wypieków, dostarczając autentyczny smak chleba mieszkańcom Szczucina i okolic.</p>
+            </div>
+
+            <div class="stopka-sekcja">
+                <h3>Lokalizacja</h3>
+                <p>
+                    <a href="https://www.google.com/maps?q=Pod+Telegrafem.+Piekarnia,+Rynek+21,+33-230+Szczucin" target="_blank" style="color: #C4B9B0; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='#C68B59'" onmouseout="this.style.color='#C4B9B0'">
+                        Rynek 21<br>
+                        33-230 Szczucin
+                    </a>
+                </p>
+                <p style="margin-top: 15px;">
+                    <a href="https://www.google.com/maps?q=Pod+Telegrafem.+Piekarnia,+Rynek+21,+33-230+Szczucin" target="_blank" style="color: var(--kolor-akcent); text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 5px;">
+                        🗺️ Zobacz pinezkę na Mapach Google
+                    </a>
+                </p>
+            </div>
+
+            <div class="stopka-sekcja">
+                <h3>Contact</h3>
+                <p>📞 Telefon: +48 728 892 207</p>
+                <p>✉️ E-mail: biuro@piekarniapodtelegrafem.pl</p>
+            </div>
+
+            <div class="stopka-sekcja">
+                <h3>Godziny Pracy</h3>
+                <p>Poniedziałek - Piątek: 6:00 - 18:00</p>
+                <p>Sobota: 6:00 - 14:00</p>
+                <p>Niedziela: Zamknięte (Odpoczywamy)</p>
+            </div>
+        </div>
+
+        <div id="status-piekarni"></div>
+
+        <div class="stopka-dol">
+            <p>© 2026 Piekarnia Pod Telegrafem. Projekt witryny komercyjnej wykonany na zajęcia szkolne.</p>
+        </div>
+    </footer>
+
+    <script src="js/skrypty.js"></script>
+</body>
+</html>

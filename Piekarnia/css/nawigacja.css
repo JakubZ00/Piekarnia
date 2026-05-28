@@ -1,0 +1,114 @@
+/* Górne Menu */
+header {
+    background-color: rgba(46, 26, 8, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(198, 139, 89, 0.15);
+}
+
+.menu-glowne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--czysty-bialy);
+    letter-spacing: -0.5px;
+}
+
+    .logo span {
+        color: var(--kolor-akcent);
+    }
+
+.menu-glowne ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+    .menu-glowne ul li {
+        margin-left: 35px;
+    }
+
+        .menu-glowne ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--animacja-p³ynna);
+            position: relative;
+            padding: 5px 0;
+        }
+
+            .menu-glowne ul li a:hover {
+                color: var(--kolor-akcent);
+            }
+
+            /* Animowana kreska pod linkiem w menu */
+            .menu-glowne ul li a::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: var(--kolor-akcent);
+                transition: var(--animacja-p³ynna);
+            }
+
+            .menu-glowne ul li a:hover::after {
+                width: 100%;
+            }
+
+/* Du¿a Profesjonalna Stopka */
+footer {
+    background-color: var(--kolor-glowny);
+    color: var(--czysty-bialy);
+    padding: 80px 20px 40px 20px;
+    margin-top: 100px;
+    border-top: 4px solid var(--kolor-akcent);
+}
+
+.stopka-kontener {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.stopka-sekcja {
+    flex: 1;
+}
+
+    .stopka-sekcja h3 {
+        color: var(--kolor-akcent);
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 700;
+    }
+
+    .stopka-sekcja p {
+        color: #C4B9B0;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+.stopka-dol {
+    text-align: center;
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #8C7E74;
+    font-size: 0.85rem;
+}

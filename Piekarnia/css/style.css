@@ -1,0 +1,630 @@
+/* ==========================================================================
+   1. USTAWIENIA G£ÓWNE I ZMIENNE
+   ========================================================================== */
+:root {
+    --kolor-glowny: #3A2E2B;
+    --kolor-tla: #FDFBF7;
+    --kolor-tekstu: #4A3F3B;
+    --kolor-akcent: #C68B59;
+    --kolor-akcent-hover: #8B5E34;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--kolor-tla);
+    color: var(--kolor-tekstu);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+/* ==========================================================================
+   2. NAWIGACJA I NAG£ÓWEK (MENU)
+   ========================================================================== */
+header {
+    background-color: var(--kolor-glowny);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.menu-glowne {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+    .menu-glowne .logo {
+        color: #FFFFFF;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+        .menu-glowne .logo span {
+            color: var(--kolor-akcent);
+        }
+
+    .menu-glowne ul {
+        display: flex;
+        list-style: none;
+        align-items: center;
+    }
+
+        .menu-glowne ul li {
+            margin-left: 20px;
+        }
+
+            .menu-glowne ul li a {
+                color: #F5EBE6;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: color 0.3s ease;
+            }
+
+                .menu-glowne ul li a:hover {
+                    color: var(--kolor-akcent);
+                }
+
+/* ==========================================================================
+   3. SEKCJA HERO I ATUTY (STRONA G£ÓWNA)
+   ========================================================================== */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(rgba(58, 46, 43, 0.8), rgba(58, 46, 43, 0.8)), url('../images/hero-bg.jpg') no-repeat center/cover;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+    .hero h1 {
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        font-weight: 800;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+.atuty-sekcja {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.atut-box {
+    flex: 1;
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--kolor-akcent);
+}
+
+    .atut-box .ikona {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .atut-box h4 {
+        font-size: 1.25rem;
+        color: var(--kolor-glowny);
+        margin-bottom: 10px;
+    }
+
+/* ==========================================================================
+   4. KARTY PRODUKTÓW (GALERIA)
+   ========================================================================== */
+.gallery {
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding: 0 20px;
+}
+
+.wypieki-kontener {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.wypiek-karta {
+    flex: 1;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+    .wypiek-karta:hover {
+        transform: translateY(-5px);
+    }
+
+    .wypiek-karta img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+.wypiek-karta-tresc {
+    padding: 20px;
+}
+
+    .wypiek-karta-tresc h3 {
+        color: var(--kolor-glowny);
+        margin-bottom: 10px;
+    }
+
+/* ==========================================================================
+   5. PODSTRONA: O NAS & PODSTRONA: CENNIK
+   ========================================================================== */
+.o-nas-sekcja {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+.o-nas-tekst {
+    flex: 1;
+}
+
+    .o-nas-tekst h2 {
+        font-size: 2.4rem;
+        color: var(--kolor-glowny);
+        margin-bottom: 20px;
+    }
+
+.about-image {
+    flex: 1;
+}
+
+    .about-image img {
+        width: 100%;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+/* Cennik - Tabela */
+.pricing {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid #EFEAE6;
+}
+
+th {
+    background-color: var(--kolor-glowny);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+tr:hover {
+    background-color: #FDF9F5;
+}
+
+/* ==========================================================================
+   6. PODSTRONA: FORMULARZ KONTAKTOWY
+   ========================================================================== */
+.contact {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+form {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--kolor-glowny);
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #DCD5D0;
+        border-radius: 6px;
+        background-color: #FAF8F6;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--kolor-akcent);
+        }
+
+form button {
+    width: 100%;
+    background-color: var(--kolor-akcent);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    form button:hover {
+        background-color: var(--kolor-akcent-hover);
+    }
+
+/* ==========================================================================
+   7. STOPKA STRONY (FOOTER)
+   ========================================================================== */
+footer {
+    background-color: var(--kolor-glowny);
+    color: #C4B9B0;
+    padding: 50px 0 20px 0;
+    margin-top: 60px;
+}
+
+.stopka-kontener {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.stopka-sekcja {
+    flex: 1;
+}
+
+    .stopka-sekcja h3 {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+
+        .stopka-sekcja h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--kolor-akcent);
+        }
+
+    .stopka-sekcja p {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+.stopka-dol {
+    text-align: center;
+    border-top: 1px solid #4A3E3A;
+    margin-top: 30px;
+    padding-top: 20px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   8. NOWE INTERAKTYWNE FUNKCJONALNOŒCI (JS & UX)
+   ========================================================================== */
+
+.przelacznik-nocny {
+    display: inline-block;
+    background: none;
+    border: 1px solid #ffb066;
+    color: #ffb066;
+    padding: 6px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+    .przelacznik-nocny:hover {
+        background: #ffb066;
+        color: #332211;
+    }
+
+/* Nadpisywanie kolorów dla Trybu Nocnego (Dark Mode) */
+body.tryb-nocny {
+    background-color: #1a1512 !important;
+    color: #f5f0eb !important;
+}
+
+    body.tryb-nocny main,
+    body.tryb-nocny .atut-box,
+    body.tryb-nocny .wypiek-karta,
+    body.tryb-nocny table,
+    body.tryb-nocny form {
+        background-color: #261f1a !important;
+        color: #e6ded7 !important;
+    }
+
+    body.tryb-nocny td, body.tryb-nocny th {
+        border-color: #3d322a !important;
+        color: #e6ded7 !important;
+    }
+
+    body.tryb-nocny h1, body.tryb-nocny h2, body.tryb-nocny h3, body.tryb-nocny h4 {
+        color: #ffb066 !important;
+    }
+
+    body.tryb-nocny p, body.tryb-nocny label {
+        color: #d1c7bd !important;
+    }
+
+/* Przycisk p³ynnego powrotu na górê */
+#btn-top {
+    position: fixed;
+    bottom: 30px;
+    right: -60px;
+    background-color: var(--kolor-akcent);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: all 0.4s ease;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    #btn-top.pokaz {
+        right: 30px;
+    }
+
+    #btn-top:hover {
+        background-color: var(--kolor-akcent-hover);
+        transform: translateY(-5px);
+    }
+
+/* Baner powiadomienia o Ciasteczkach (Cookies) */
+#pasek-cookies {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #261f1a;
+    color: #e6ded7;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+    z-index: 10000;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-top: 2px solid var(--kolor-akcent);
+}
+
+    #pasek-cookies button {
+        background-color: var(--kolor-akcent);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+
+        #pasek-cookies button:hover {
+            background-color: var(--kolor-akcent-hover);
+        }
+
+/* Komunikaty walidacji formularza w JS */
+.blad-walidacji {
+    color: #d32f2f;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+.input-blad {
+    border: 2px solid #d32f2f !important;
+    background-color: #ffebee !important;
+}
+
+/* Kontener dla Iframe z map¹ Google */
+.mapa-kontener {
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ==========================================================================
+   9. STYLIZACJA OKIEN MODALNYCH (DLA SK£ADU I ZDJÊÆ PRZEKROJU)
+   ========================================================================== */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+    .modal.otwarty {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+.modal-tresc {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 750px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.otwarty .modal-tresc {
+    transform: translateY(0);
+}
+
+.zamknij-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+    .zamknij-modal:hover {
+        color: var(--kolor-glowny);
+    }
+
+#modal-tytul {
+    color: var(--kolor-glowny);
+    border-bottom: 2px solid var(--kolor-akcent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.modal-uklad {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.modal-foto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.foto-podpis {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+#modal-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.modal-dane {
+    flex: 1.2;
+    min-width: 280px;
+}
+
+    .modal-dane h4 {
+        color: var(--kolor-glowny);
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+    }
+
+        .modal-dane h4:first-of-type {
+            margin-top: 0;
+        }
+
+#modal-sklad {
+    font-size: 0.95rem;
+    color: var(--kolor-tekstu);
+    background-color: #faf6f2;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 3px solid var(--kolor-akcent);
+}
+
+.alergeny-alert {
+    font-size: 0.9rem;
+    color: #c62828;
+    font-weight: 500;
+}
+
+body.tryb-nocny .modal-tresc {
+    background-color: #261f1a !important;
+    color: #e6ded7 !important;
+}
+
+body.tryb-nocny #modal-sklad {
+    background-color: #332922 !important;
+    color: #e6ded7 !important;
+}
+
+body.tryb-nocny .zamknij-modal:hover {
+    color: #ffb066;
+}
